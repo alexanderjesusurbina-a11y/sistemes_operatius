@@ -30,7 +30,7 @@
         <tr><th>#</th><th>Apartat</th></tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td><a href="#apartat1">Instal·lació SO</a></td></tr>
+        <tr><td>1</td><td><a href="#apartat1">Pin Packeting</a></td></tr>
         <tr><td>2</td><td><a href="#apartat2">Punts de restauració</a></td></tr>
         <tr><td>3</td><td><a href="#apartat3">Llicències</a></td></tr>
         <tr><td>4</td><td><a href="#apartat4">Virtualització</a></td></tr>
@@ -42,21 +42,31 @@
     </table>
 
     <article class="apartat" id="apartat1">
-      <h2>1. Instal·lació SO</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Un cop arrencat
-         el suport d'instal·lació, cal seguir l'assistent i triar les opcions de
-         particionat abans de continuar. <strong>Aquest pas és irreversible</strong>,
-         així que revisa bé el disc de destinació.</p>
-      <ul>
-        <li>Arrencar des del USB o la imatge ISO.</li>
-        <li>Triar l'idioma i la distribució de teclat.</li>
-        <li>Configurar el particionat del disc.</li>
-        <li>Esperar que finalitzi la còpia d'arxius i reiniciar.</li>
-      </ul>
-      <img src="../img/exemple.svg" alt="Exemple de captura de pantalla de l'assistent d'instal·lació">
-      <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-         Un cop reiniciat el sistema, comprova que arrenca correctament i que
-         reconeix tot el maquinari abans de continuar amb el següent apartat.</p>
+      <h2>1. Pin Packeting</h2>
+      <p>El primer que farem per a aquesta practica sera afegir un repositori, en aquest cas sera per a 
+        php.</p>
+      <img src="../img/pin2.png" alt="Instalació repositori">
+      
+      <p>Una vegada instal·lat el repositori veurem la policy del php 8.3
+        i veurem que tant el nou repositori com el d'Ubuntu te un numero de prioritat de
+        500</p>
+      <img src="../img/pin3.png" alt="Comprovació policy">
+     
+      <p>Ara cambiaren aquesta prioritat, per fer-ho el primer que farem sera veure 
+      el nom de surtida amb la següent comanda</p>
+      <img src="../img/pin4.png" alt="Comprobació release">
+      
+      <p>Crearem un fitxer on ficarem la el valor que volem donar al paquets, en el meu cas ficare que sol el 
+         paquet principal tingui un valor de 500 i que la resta tingui un valor de 400</p>
+      <img src="../img/pin5.png" alt="Valor paquets">
+
+      <p>>Tornarem a fer la comanda per veure els valors dels paquets i veurem que ara els subpaquets tenen
+      un valor de 400</p>
+      <img src="../img/pin6.png" alt="Policy 2">
+
+      <p>Per ultim, comprovarem que la resta de valors s'hagui modificat, per fer-ho
+      veurem el policy d'un PHP pero en aquest cas sera del 8.4, veurem que el seu valor es 400</p>
+      <img src="../img/pin7.png" alt="Comprobació PHP 8.4">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
     <article class="apartat" id="apartat2">
